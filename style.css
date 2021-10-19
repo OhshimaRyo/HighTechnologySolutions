@@ -5,3 +5,127 @@ Description: HTS LLC corporation site
 Author: Ryo Ohshima
 Version : 1.0.0
 */
+
+/*---- cssreset ----*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+input,
+textarea,
+p,
+th,
+td {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+img {
+  border:0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style:normal;
+  font-weight:normal;
+}
+
+caption,
+th {
+  text-align:left;
+}
+
+q:before,
+q:after {
+  content:'';
+}
+
+input,
+textarea,
+select {
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+}
+
+/* for IE*/
+input,
+textarea,
+select {
+  *font-size:100%;
+}
+
+legend {
+  color:#000;
+}
+/*---- cssreset ----*/
+
+/*---- main ----*/
+
+/* common */
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+p, h2, h3, h4, h5, h6, th, td, li {
+  color: #333333;
+}
+p {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* header */
+.hts-header__pc {
+  width: calc(100% - 100px);
+  height: 70px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #707070;
+}
+.hts-header__pc a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hts-header__pc_logo {
+  width: 120px;
+  display: flex;
+}
+.hts-header__pc_logo img {
+  width: 100%;
+  align-items: center;
+}
+.hts-header__pc_nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* footer */
+
+/*---- main ----*/
