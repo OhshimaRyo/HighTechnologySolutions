@@ -71,6 +71,32 @@
       <p>Works</p>
       <h2 id="#works">制作実績</h2>
     </div>
+    <div>
+      <?php $args = array(
+        'numberposts' => 3,
+        'post_type' => 'works'
+      );
+      $works = get_posts($args);
+      if($works):
+        foreach($works as $work):
+          global $work;
+          setup_postdata( $work );
+          $id = get_the_id();
+          $url = get_post_meta($id, 'wurks_url', true);
+      ?>
+
+      <a href="<?php echo $url ?>">
+        <p class="hts-works__title"><?php the_title(); ?></p>
+        <img src="<?php the_post_thumbnail_url('medium'); ?>">
+        <p class="hts-works__url"><?php echo $url ?></p>
+      </a>
+
+      <?php endforeach; ?>
+      <?php else : //記事が無い場合 ?>
+      <p>制作実績はありません。</p>
+      <?php endif;
+      wp_reset_postdata(); //クエリのリセット ?>
+    </div>
   </section>
 
   <!-- blog -->
